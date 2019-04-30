@@ -40,6 +40,8 @@ class LoginViewController: UIViewController {
                 // print("😍")
                
                 let test2 = "\(accessToken.authenticationToken)"
+                print("👻👻👻👻👻👻")
+                print(accessToken.authenticationToken)
                 
                 FBNetworkController.sharedInstance.accessToken1 = test2
                 
@@ -53,15 +55,18 @@ class LoginViewController: UIViewController {
                     print(accessTokens)
                     print(namesOfPages)
                     print(pageIds)
+                    
+                    
+                    
                 
-                    FBNetworkController.sharedInstance.getPageTokenWithPageID(accessTokens2: accessTokens.first!, pageIds: pageIds.first!, completion: { (pageAccessToken, idSame) in
+                    FBNetworkController.sharedInstance.getPageTokenWithPageID(accessToken: accessTokens.first!, pageID: pageIds.first!, completion: { (pageAccessToken, idSame) in
                    print("🎃🎃🎃🎃🎃🎃🎃")
                         print(pageAccessToken)
                         print(idSame)
                         
                         //pass pageToken and idSame
                         
-                        FBNetworkController.sharedInstance.postToFaceBookWithPageToken(value: "bbbbbb", pageAcessToken: pageAccessToken, idSame: idSame, completion: { (succes) in
+                        FBNetworkController.sharedInstance.postToFaceBookWithPageToken(value: "jjjjbbbbbb", pageAcessToken: pageAccessToken, idSame: idSame, completion: { (succes) in
                             print("YO THIS MEANS I AM POSTING WITH XCODE ")
                         })
                     })
@@ -140,9 +145,7 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
     func facebookShare3(){
-        
         
         let request = FBSDKGraphRequest(graphPath: "/1285691484917122/feed", parameters: [
             "message": "4567889"

@@ -5,8 +5,6 @@
 //  Created by Ben Huggins on 4/26/19.
 //  Copyright © 2019 User. All rights reserved.
 //
-
-
 //1//https://graph.facebook.com/me/accounts?fields=about,access_token,name&access_token=EAAGXNlcizs8BANg3uDlconvdt2hEd3mpo5WOtbZCwUZCBD3Wz9TdYBmalKgkl7Y9kAkqOJrJa8PzZCvRydaYrgqZAS0fR1SrdMqi4t5HCuPWwvA7ZBwcK0w0AARnVKuv8sTIGxBcSZAvvrZByRb27BzwXognIVabzfN0XRbDrCOWwZDZD
 
 import Foundation
@@ -14,7 +12,9 @@ import UIKit
 
 class FBNetworkController {
     
-    var accessToken1 = ""
+    var accessToken1 = "" //<=== This is the starting user access Token
+    
+    var pageCredentials : [String : [String:String]] = [:]
     
     var accessTokens: [String] = []
     var namesOfPages: [String] = []
@@ -40,8 +40,8 @@ class FBNetworkController {
         
         guard let requestURL = components?.url else {completion([],[],[]); return}
         
-        print("😔😔😔😔😔😔😔😔😔😔😔😔😔")
-        print(requestURL)
+//        print("😔😔😔😔😔😔😔😔😔😔😔😔😔")
+//        print(requestURL)
         
         var urlRequest = URLRequest(url: requestURL)
         
@@ -69,8 +69,8 @@ class FBNetworkController {
             guard let jsonList :[[String : Any]] = jsonDictionary?["data"] as? [[String : Any]] else
             { print("jsonItems");  return }
             
-            print("😏😏😏😏😏😏😏😏")
-            dump(jsonList)
+//            print("😏😏😏😏😏😏😏😏")
+//            dump(jsonList)
             
             for tokenList in jsonList {
                 if let access_token = tokenList["access_token"] as? String,
@@ -80,10 +80,14 @@ class FBNetworkController {
                     self.namesOfPages.append(name)
                     self.pageIds.append(id)
                     
-                    //                    print("🥶🥶🥶🥶🥶🥶🥶🥶")
-                    //                    print(self.accessTokens)
-                    //                    print(self.names)
-                    //                    print(self.ids)
+                    // at this point I have populated the different page credentials
+                    self.pageCredentials = [ name :
+                                        ["pageID" : id,
+                                         "accessToken" : access_token ]]
+                    
+                    
+                    
+                    
                 }
             }
             completion(self.accessTokens, self.namesOfPages, self.pageIds)
@@ -92,28 +96,68 @@ class FBNetworkController {
         }
         dataTask.resume()
     }
+ 
+    // var pageNames: ["Ben","The Social"]
     
-    //    //2//https://graph.facebook.com/1285691484917122?fields=access_token&access_token=EAAGXNlcizs8BANChpgX5HikII1EyeEh6ZA6gM34CHlTqnLvExBVOi2dPbxmX5BT1A1mA1WkvpPVHIn3cYnVfADmJXnVneMlPDTCkDAtRMRWIyrm66MnMta1i4p4IaJctOR5YgVoWCZBnu3BHGljpqSLkBEIqMYreaMscNT4QZDZD
+    
+    
+    func postToDesiredFBPages(pageNames: [String])  {
+        
+        for pageName in pageNames {
+            
+            let credentials = pageCredentials[pageName]!   //<== get the associated page name selected
+            
+            let pageId = credentials["pageID"]!
+            let accessToken = credentials["accessToken"]!
+            
+            print(pageId)
+            print(accessToken)
+            
+            
+            
+            getPageTokenWithPageID(accessToken: accessToken, pageID: pageId, completion: { (pageAccessToken, idSame) -> Void in
+                print(pageAccessToken)
+                print(idSame)
+                
+                
+              // Need to provide what I am posting text, photo, video  //<<<<<<<<
+                
+                
+                
+                
+                
+                
+                
+            self.postToFaceBookWithPageToken(value: <#T##String#>, pageAcessToken: pageAccessToken, idSame: idSame, completion: { (success) in
+                    print("you posted to FB!!!")
+                })
+                
+            })
+        }
+        
+    }
+  
+//2//https://graph.facebook.com/1285691484917122?fields=access_token&access_token=EAAGXNlcizs8BANChpgX5HikII1EyeEh6ZA6gM34CHlTqnLvExBVOi2dPbxmX5BT1A1mA1WkvpPVHIn3cYnVfADmJXnVneMlPDTCkDAtRMRWIyrm66MnMta1i4p4IaJctOR5YgVoWCZBnu3BHGljpqSLkBEIqMYreaMscNT4QZDZD
     //
     //    // This will fetch the page Token
-    func getPageTokenWithPageID(accessTokens2: String, pageIds: String, completion: @escaping ((String,String) -> Void)) {
+    func getPageTokenWithPageID(accessToken: String, pageID: String, completion: @escaping ((String,String) -> Void)) {
         
-        print(pageIds)
+        print(pageID)
         
         guard var url = baseUrl else {return}
         
-        url.appendPathComponent(pageIds)  //<- need to fix this
+        url.appendPathComponent(pageID)  //<- need to fix this
         
         let fields = URLQueryItem(name: "fields", value: "access_token")
-        let fields2 = URLQueryItem(name: "access_token", value: accessTokens2)
+        let fields2 = URLQueryItem(name: "access_token", value: accessToken)
         
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
         components?.queryItems = [fields, fields2]
         
         guard let requestURL = components?.url else {completion("",""); return}
         
-        print("😔😔😔😔😔😔😔😔😔😔😔😔😔")
-        print(requestURL)
+//        print("😔😔😔😔😔😔😔😔😔😔😔😔😔")
+//        print(requestURL)
         
         var urlRequest = URLRequest(url: requestURL)
         
@@ -152,7 +196,7 @@ class FBNetworkController {
         dataTask.resume()
     }
     
-    //https://graph.facebook.com/1285691484917122/feed?message=hey&access_token=EAAGXNlcizs8BAMTGmgY5tPw9AEgDWsj61dfyZC7RQ5qmtDmFhxOAyEYlzNZCh6MuAZAvIX0Y0y4LJbwcfkoRUuOKaijox15MNPvglMMFkVhDiWI0dlvbVxw787xn6NinKLVcLHmptH10g9a0iESifxUC5kTxvcegb07ZAbZBMRwZDZD
+//https://graph.facebook.com/1285691484917122/feed?message=hey&access_token=EAAGXNlcizs8BAMTGmgY5tPw9AEgDWsj61dfyZC7RQ5qmtDmFhxOAyEYlzNZCh6MuAZAvIX0Y0y4LJbwcfkoRUuOKaijox15MNPvglMMFkVhDiWI0dlvbVxw787xn6NinKLVcLHmptH10g9a0iESifxUC5kTxvcegb07ZAbZBMRwZDZD
     
     
     func postToFaceBookWithPageToken(value: String, pageAcessToken: String, idSame: String, completion: @escaping ((Bool) -> Void)) {
@@ -170,16 +214,14 @@ class FBNetworkController {
         
         guard let requestURL = components?.url else {completion(false); return}
         
-        print("😔😔😔😔😔😔😔😔😔😔😔😔😔")
-        print(requestURL)
+//        print("😔😔😔😔😔😔😔😔😔😔😔😔😔")
+//        print(requestURL)
         
-        var message = Message(message: value)
+        let message = Message(message: value)
         
         var postData: Data
         
         //post this url
-        
-        
         do {
             let jsonEncoder = JSONEncoder()
             postData = try jsonEncoder.encode(message)

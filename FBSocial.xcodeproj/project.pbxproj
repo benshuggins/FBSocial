@@ -14,8 +14,10 @@
 		CE1C3045226B81B7006551D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1C3043226B81B7006551D1 /* LaunchScreen.storyboard */; };
 		CE1C304F226B9341006551D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C304E226B9341006551D1 /* LoginViewController.swift */; };
 		CE4496C82273A6A400DE18E2 /* FBNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4496C72273A6A400DE18E2 /* FBNetworkController.swift */; };
-		CE4496D92274F97400DE18E2 /* TokensOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4496D82274F97400DE18E2 /* TokensOne.swift */; };
 		CE4496DB2275928400DE18E2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4496DA2275928400DE18E2 /* Message.swift */; };
+		CE5E841C2277629D00609D09 /* TokensOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E841B2277629D00609D09 /* TokensOne.swift */; };
+		CE5E841E227767B100609D09 /* TokensTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E841D227767B100609D09 /* TokensTwo.swift */; };
+		CE5E84202277690400609D09 /* TokensThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E841F2277690400609D09 /* TokensThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,10 @@
 		CE1C304E226B9341006551D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE1C3053226C01AF006551D1 /* FBSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FBSocial.entitlements; sourceTree = "<group>"; };
 		CE4496C72273A6A400DE18E2 /* FBNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBNetworkController.swift; sourceTree = "<group>"; };
-		CE4496D82274F97400DE18E2 /* TokensOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensOne.swift; sourceTree = "<group>"; };
-		CE4496DA2275928400DE18E2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CE4496DA2275928400DE18E2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../../Message.swift; sourceTree = "<group>"; };
+		CE5E841B2277629D00609D09 /* TokensOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensOne.swift; sourceTree = "<group>"; };
+		CE5E841D227767B100609D09 /* TokensTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTwo.swift; sourceTree = "<group>"; };
+		CE5E841F2277690400609D09 /* TokensThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensThree.swift; sourceTree = "<group>"; };
 		EB21859ED67D3DFD717438BF /* Pods-FBSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBSocial/Pods-FBSocial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,11 +91,10 @@
 			children = (
 				CE1C3053226C01AF006551D1 /* FBSocial.entitlements */,
 				CE1C304D226B9315006551D1 /* Views */,
+				CE5E841A227761BD00609D09 /* New Group */,
 				CE4496C92273A6B700DE18E2 /* ModelControllers */,
 				CE1C3050226B9379006551D1 /* ViewControllers */,
 				CE1C304C226B9301006551D1 /* Resources */,
-				CE4496D82274F97400DE18E2 /* TokensOne.swift */,
-				CE4496DA2275928400DE18E2 /* Message.swift */,
 			);
 			path = FBSocial;
 			sourceTree = "<group>";
@@ -129,6 +132,18 @@
 				CE4496C72273A6A400DE18E2 /* FBNetworkController.swift */,
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		CE5E841A227761BD00609D09 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				CE4496DA2275928400DE18E2 /* Message.swift */,
+				CE5E841B2277629D00609D09 /* TokensOne.swift */,
+				CE5E841D227767B100609D09 /* TokensTwo.swift */,
+				CE5E841F2277690400609D09 /* TokensThree.swift */,
+			);
+			name = "New Group";
+			path = "ViewControllers/New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,11 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4496D92274F97400DE18E2 /* TokensOne.swift in Sources */,
+				CE5E841E227767B100609D09 /* TokensTwo.swift in Sources */,
 				CE4496C82273A6A400DE18E2 /* FBNetworkController.swift in Sources */,
+				CE5E841C2277629D00609D09 /* TokensOne.swift in Sources */,
 				CE4496DB2275928400DE18E2 /* Message.swift in Sources */,
 				CE1C304F226B9341006551D1 /* LoginViewController.swift in Sources */,
 				CE1C303B226B81B5006551D1 /* AppDelegate.swift in Sources */,
+				CE5E84202277690400609D09 /* TokensThree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
