@@ -14,10 +14,14 @@
 		CE1C3045226B81B7006551D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1C3043226B81B7006551D1 /* LaunchScreen.storyboard */; };
 		CE1C304F226B9341006551D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C304E226B9341006551D1 /* LoginViewController.swift */; };
 		CE4496C82273A6A400DE18E2 /* FBNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4496C72273A6A400DE18E2 /* FBNetworkController.swift */; };
-		CE4496DB2275928400DE18E2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4496DA2275928400DE18E2 /* Message.swift */; };
-		CE5E841C2277629D00609D09 /* TokensOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E841B2277629D00609D09 /* TokensOne.swift */; };
-		CE5E841E227767B100609D09 /* TokensTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E841D227767B100609D09 /* TokensTwo.swift */; };
-		CE5E84202277690400609D09 /* TokensThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E841F2277690400609D09 /* TokensThree.swift */; };
+		CE5E844022791B1000609D09 /* TwitterNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E843F22791B1000609D09 /* TwitterNetworkController.swift */; };
+		CED14575227B5EF900342B3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED14574227B5EF900342B3B /* GoogleService-Info.plist */; };
+		CED14579227CD3CD00342B3B /* FBPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED14578227CD3CD00342B3B /* FBPostTableViewController.swift */; };
+		CED1457F227CD47F00342B3B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1457E227CD47F00342B3B /* Message.swift */; };
+		CED14581227CD48A00342B3B /* FBPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED14580227CD48A00342B3B /* FBPost.swift */; };
+		CED14583227CD51B00342B3B /* PhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED14582227CD51B00342B3B /* PhotoSelectorViewController.swift */; };
+		CED14585227CD87600342B3B /* FBPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED14584227CD87600342B3B /* FBPostController.swift */; };
+		CED14589227CF20D00342B3B /* postFirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED14588227CF20D00342B3B /* postFirebaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +36,14 @@
 		CE1C304E226B9341006551D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE1C3053226C01AF006551D1 /* FBSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FBSocial.entitlements; sourceTree = "<group>"; };
 		CE4496C72273A6A400DE18E2 /* FBNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBNetworkController.swift; sourceTree = "<group>"; };
-		CE4496DA2275928400DE18E2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../../Message.swift; sourceTree = "<group>"; };
-		CE5E841B2277629D00609D09 /* TokensOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensOne.swift; sourceTree = "<group>"; };
-		CE5E841D227767B100609D09 /* TokensTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTwo.swift; sourceTree = "<group>"; };
-		CE5E841F2277690400609D09 /* TokensThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensThree.swift; sourceTree = "<group>"; };
+		CE5E843F22791B1000609D09 /* TwitterNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterNetworkController.swift; sourceTree = "<group>"; };
+		CED14574227B5EF900342B3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CED14578227CD3CD00342B3B /* FBPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPostTableViewController.swift; sourceTree = "<group>"; };
+		CED1457E227CD47F00342B3B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CED14580227CD48A00342B3B /* FBPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBPost.swift; sourceTree = "<group>"; };
+		CED14582227CD51B00342B3B /* PhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorViewController.swift; sourceTree = "<group>"; };
+		CED14584227CD87600342B3B /* FBPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPostController.swift; sourceTree = "<group>"; };
+		CED14588227CF20D00342B3B /* postFirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postFirebaseController.swift; sourceTree = "<group>"; };
 		EB21859ED67D3DFD717438BF /* Pods-FBSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBSocial/Pods-FBSocial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,8 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				CE1C3053226C01AF006551D1 /* FBSocial.entitlements */,
+				CED14574227B5EF900342B3B /* GoogleService-Info.plist */,
+				CED1457D227CD46100342B3B /* Models */,
 				CE1C304D226B9315006551D1 /* Views */,
-				CE5E841A227761BD00609D09 /* New Group */,
 				CE4496C92273A6B700DE18E2 /* ModelControllers */,
 				CE1C3050226B9379006551D1 /* ViewControllers */,
 				CE1C304C226B9301006551D1 /* Resources */,
@@ -122,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				CE1C304E226B9341006551D1 /* LoginViewController.swift */,
+				CED14578227CD3CD00342B3B /* FBPostTableViewController.swift */,
+				CED14582227CD51B00342B3B /* PhotoSelectorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -130,20 +141,20 @@
 			isa = PBXGroup;
 			children = (
 				CE4496C72273A6A400DE18E2 /* FBNetworkController.swift */,
+				CE5E843F22791B1000609D09 /* TwitterNetworkController.swift */,
+				CED14584227CD87600342B3B /* FBPostController.swift */,
+				CED14588227CF20D00342B3B /* postFirebaseController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
 		};
-		CE5E841A227761BD00609D09 /* New Group */ = {
+		CED1457D227CD46100342B3B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE4496DA2275928400DE18E2 /* Message.swift */,
-				CE5E841B2277629D00609D09 /* TokensOne.swift */,
-				CE5E841D227767B100609D09 /* TokensTwo.swift */,
-				CE5E841F2277690400609D09 /* TokensThree.swift */,
+				CED14580227CD48A00342B3B /* FBPost.swift */,
+				CED1457E227CD47F00342B3B /* Message.swift */,
 			);
-			name = "New Group";
-			path = "ViewControllers/New Group";
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED14575227B5EF900342B3B /* GoogleService-Info.plist in Resources */,
 				CE1C3045226B81B7006551D1 /* LaunchScreen.storyboard in Resources */,
 				CE1C3042226B81B7006551D1 /* Assets.xcassets in Resources */,
 				CE1C3040226B81B6006551D1 /* Main.storyboard in Resources */,
@@ -230,24 +242,40 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FBSocial/Pods-FBSocial-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,13 +311,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5E841E227767B100609D09 /* TokensTwo.swift in Sources */,
 				CE4496C82273A6A400DE18E2 /* FBNetworkController.swift in Sources */,
-				CE5E841C2277629D00609D09 /* TokensOne.swift in Sources */,
-				CE4496DB2275928400DE18E2 /* Message.swift in Sources */,
+				CE5E844022791B1000609D09 /* TwitterNetworkController.swift in Sources */,
+				CED14583227CD51B00342B3B /* PhotoSelectorViewController.swift in Sources */,
 				CE1C304F226B9341006551D1 /* LoginViewController.swift in Sources */,
+				CED14585227CD87600342B3B /* FBPostController.swift in Sources */,
+				CED1457F227CD47F00342B3B /* Message.swift in Sources */,
 				CE1C303B226B81B5006551D1 /* AppDelegate.swift in Sources */,
-				CE5E84202277690400609D09 /* TokensThree.swift in Sources */,
+				CED14581227CD48A00342B3B /* FBPost.swift in Sources */,
+				CED14589227CF20D00342B3B /* postFirebaseController.swift in Sources */,
+				CED14579227CD3CD00342B3B /* FBPostTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

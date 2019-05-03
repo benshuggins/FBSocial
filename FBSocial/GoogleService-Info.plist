@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1095699461735-bv9817seo23rk3ak1v2odgmq805erc5p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1095699461735-bv9817seo23rk3ak1v2odgmq805erc5p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA0DZt09w50kypnn-HfjHbXt71l4Qk2grg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1095699461735</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.checklists.FBSocial</string>
+	<key>PROJECT_ID</key>
+	<string>socialmediaapp-3daa3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>socialmediaapp-3daa3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1095699461735:ios:3232c3efce12103c</string>
+	<key>DATABASE_URL</key>
+	<string>https://socialmediaapp-3daa3.firebaseio.com</string>
+</dict>
+</plist>
