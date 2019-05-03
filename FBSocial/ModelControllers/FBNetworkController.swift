@@ -84,10 +84,7 @@ class FBNetworkController {
                     self.pageCredentials = [ name :
                                         ["pageID" : id,
                                          "accessToken" : access_token ]]
-                    
-                    
-                    
-                    
+        
                 }
             }
             completion(self.accessTokens, self.namesOfPages, self.pageIds)
@@ -97,46 +94,39 @@ class FBNetworkController {
         dataTask.resume()
     }
  
-    // var pageNames: ["Ben","The Social"]
-    
-    
-    
-    func postToDesiredFBPages(pageNames: [String])  {
-        
-        for pageName in pageNames {
-            
-            let credentials = pageCredentials[pageName]!   //<== get the associated page name selected
-            
-            let pageId = credentials["pageID"]!
-            let accessToken = credentials["accessToken"]!
-            
-            print(pageId)
-            print(accessToken)
-            
-            
-            
-            getPageTokenWithPageID(accessToken: accessToken, pageID: pageId, completion: { (pageAccessToken, idSame) -> Void in
-                print(pageAccessToken)
-                print(idSame)
-                
-                
-              // Need to provide what I am posting text, photo, video  //<<<<<<<<
-                
-                
-                
-                
-                
-                
-                
-            self.postToFaceBookWithPageToken(value: <#T##String#>, pageAcessToken: pageAccessToken, idSame: idSame, completion: { (success) in
-                    print("you posted to FB!!!")
-                })
-                
-            })
-        }
-        
-    }
-  
+//    // var pageNames: ["Ben","The Social"]
+//    func postToDesiredFBPages(pageNames: [String])  {
+//
+//        for pageName in pageNames {
+//
+//            let credentials = pageCredentials[pageName]!   //<== get the associated page name selected
+//
+//            let pageId = credentials["pageID"]!
+//            let accessToken = credentials["accessToken"]!
+//
+//            print(pageId)
+//            print(accessToken)
+//
+//                // these are called inside here now instead of from LoginVC
+//
+//            getPageTokenWithPageID(accessToken: accessToken, pageID: pageId, completion: { (pageAccessToken, idSame) -> Void in
+//                print(pageAccessToken)
+//                print(idSame)
+//
+//
+//              // Need to provide what I am posting text, photo, video  //<<<<<<<<
+//
+//
+//
+//            self.postToFaceBookWithPageToken(value: "hey hello this works", pageAcessToken: pageAccessToken, idSame: idSame, completion: { (success) in
+//                    print("you posted to FB!!!")
+//                })
+//
+//            })
+//        }
+//
+//    }
+
 //2//https://graph.facebook.com/1285691484917122?fields=access_token&access_token=EAAGXNlcizs8BANChpgX5HikII1EyeEh6ZA6gM34CHlTqnLvExBVOi2dPbxmX5BT1A1mA1WkvpPVHIn3cYnVfADmJXnVneMlPDTCkDAtRMRWIyrm66MnMta1i4p4IaJctOR5YgVoWCZBnu3BHGljpqSLkBEIqMYreaMscNT4QZDZD
     //
     //    // This will fetch the page Token
@@ -204,9 +194,15 @@ class FBNetworkController {
         guard var url = baseUrl else {return}
         
         url.appendPathComponent(idSame)  //<- need to fix this
-        url.appendPathComponent("feed")
+        //url.appendPathComponent("feed")
         
-        let fields = URLQueryItem(name: "message", value: value)
+        url.appendPathComponent("video")
+        
+        
+       // let fields = URLQueryItem(name: "message", value: value)
+        
+        let fields = URLQueryItem(name: "file_url", value: value)
+        
         let fields2 = URLQueryItem(name: "access_token", value: pageAcessToken)
         
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)

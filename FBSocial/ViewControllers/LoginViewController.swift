@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
                         
                         //pass pageToken and idSame
                         
-                        FBNetworkController.sharedInstance.postToFaceBookWithPageToken(value: "jjjjbbbbbb", pageAcessToken: pageAccessToken, idSame: idSame, completion: { (succes) in
+                        FBNetworkController.sharedInstance.postToFaceBookWithPageToken(value: "http://593develop.com/ben/video.MP4", pageAcessToken: pageAccessToken, idSame: idSame, completion: { (succes) in
                             print("YO THIS MEANS I AM POSTING WITH XCODE ")
                         })
                     })

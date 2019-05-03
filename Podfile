@@ -9,5 +9,8 @@ target 'FBSocial' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare' 
-
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
+pod 'Firebase/Auth'
 end
